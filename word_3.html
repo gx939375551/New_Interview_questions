@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="word_3.css">
+    <title>初级前端工程师面试题</title>
+</head>
+
+<body style="background-color:#456886">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 word-style">
+                <h1 class="text-center">最新前端开发工程师面试题(CSS部分)</h1>
+                <h4>1.CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？</h4>
+                <p>1.id选择器（ # myid）</p>
+                <p>2.类选择器（.myclassname)</p>
+                <p>3.标签选择器（div, h1, p）</p>
+                <p>4.相邻选择器（h1 + p）</p>
+                <p>5.子选择器（ul &lt;li） </p>
+                <p>6.后代选择器（li a）</p>
+                <p>7.通配符选择器（ * ）</p>
+                <p>8.属性选择器（a[rel = "external"]）</p>
+                <p>9.伪类选择器（a: hover, li: nth - child）</p>
+                <p>可继承的样式： font-size font-family color, UL LI DL DD DT;</p>
+                <p>不可继承的样式：border padding margin width height ;</p>
+                <p>优先级就近原则，同权重情况下样式定义最近者为准;</p>
+                <p>载入样式以最后载入的定位为准;</p>
+                <p>优先级为:
+                    <br/>!important > id > class > tag important 比 内联优先级高</p>
+                <h4>2.CSS3新增伪类举例：</h4>
+                <p>p:first-of-type 选择属于其父元素的首个元素的每个元素。</p>
+                <p>p:last-of-type 选择属于其父元素的最后元素的每个元素。</p>
+                <p>p:only-of-type 选择属于其父元素唯一的元素的每个元素。</p>
+                <p>p:only-child 选择属于其父元素的唯一子元素的每个元素。</p>
+                <p>p:nth-child(2) 选择属于其父元素的第二个子元素的每个元素。</p>
+                <p>:enabled :disabled 控制表单控件的禁用态。</p>
+                <p>:checked单选框或复选框被选中。</p>
+                <h4>3.如何居中div？如何居中一个浮动元素？</h4>
+                <p>给div设置一个宽度，然后添加margin:0 auto属性</p>
+                <p>div{ width:200px; margin:0 auto; }</p>
+                <h4>4.居中一个浮动元素</h4>
+                <p>确定容器的宽高 宽500 高 300 的层 设置层的外边距 .div { Width:500px ; height:300px;//高度可以不设 Margin: -150px 0 0 -250px; position:
+                    <br/>relative;相对定位 background-color:pink;//方便看效果 left:50%; top:50%;} </p>
+                <p>列出display的值，说明他们的作用。position的值， relative和absolute定位原点是？</p>
+                <p>1.block 像块类型元素一样显示。 none 缺省值。像行内元素类型一样显示。 inline-block 像行内元素一样显示，但其内容象块类型元素
+                    <br/>一样显示。 list-item 像块类型元素一样显示，并添加样式列表标记。 </p>
+                <p>2. absolute　生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。</p>
+                <p>fixed （老IE不支持） 生成绝对定位的元素，相对于浏览器窗口进行定位。</p>
+                <p>relative 　生成相对定位的元素，相对于其正常位置进行定位。</p>
+                <p>static 默认值。没有定位，元素出现在正常的流中 *（忽略 top, bottom, left, right z-index 声明）。</p>
+                <p>inherit 规定从父元素继承 position 属性的值。</p>
+                <h4>5.为什么要初始化CSS样式？</h4>
+                <p>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。当然，
+                    <br/>初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。最简单的初始化方法就是： * {padding: 0;
+                    <br/>margin: 0;} （不建议）淘宝的样式初始化： body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button,input, textarea, th, td { margin:0; padding:0; }body, button, input, select, textarea { font:12px/1.5tahoma, arial, /5b8b/4f53; }h1, h2, h3,
+                    <br/>h4, h5, h6{ font-size:100%; }address, cite, dfn, em, var { font-style:normal; }code, kbd, pre, samp { font-family:couriernew, courier,
+                    <br/> monospace; }small{ font-size:12px; }ul, ol { list-style:none; }a { text-decoration:none; }a:hover { text-decoration:underline; }sup { vertical-align:text-top; }sub{ vertical-align:text-bottom; }legend { color:#000; }fieldset, img { border:0; }button, input, select, textarea { font-size:100%; }table { border-collapse:collapse; border-spacing:0; }
+                </p>
+                <h4>6.对BFC规范的理解？</h4>
+                <p>（W3C CSS 2.1 规范中的一个概念,它决定了元素如何对其内容进行定位,以及与其他元素的关 系和相互作用。）</p>
+                <h4>7.css定义的权重</h4>
+                <p>以下是权重的规则：标签的权重为1，class的权重为10，id的权重为100，以下例子是演示各种定义的权重值：/*权重为1*/div{}/*权重为10*/.
+                    <br/>class1{}/*权重为100*/#id1{}/*权重为100+1=101*/#id1 div{}/*权重为10+1=11*/.>class1 div{}/*权重为10+10+1=21*/.class1 .class2 div{} 如果
+                    <br/>权重相同，则最后定义的样式会起作用，但是应该避免这种情况出现
+                </p>
+                <h4>8.CSS3有哪些新特性？</h4>
+                <p>CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px）， 对文字加特效（text-shadow、），线性渐变（gradient），旋转
+                    <br/>（transform） transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜 增加了更多的CSS选择器
+                    <br/> 多背景 rgba
+                </p>
+                <h4>9.介绍一下CSS的盒子模型？</h4>
+                <p>（1）有两种， IE 盒子模型、标准 W3C 盒子模型；IE的content部分包含了 border 和 pading;</p>
+                <p>（2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border).</p>
+                <nav>
+                    <ul class="pager">
+                        <li><a href="word_2.html">上一页</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

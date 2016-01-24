@@ -1,0 +1,13 @@
+.word-style{
+	background-color: #ffffff;
+	height: 1900px;
+	margin-top: 20px;
+	border:1px solid #000000;
+	border-radius: 10px;
+}
+h4{
+	color: #2376bd;
+}
+p{
+	margin-left: 15px;
+}
